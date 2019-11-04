@@ -1,0 +1,26 @@
+#колодец,ножницы,бумага
+game = ["Камень","ножницы","бумага"]
+puts "Ваш выбор: \"
+0.Колодец
+1.Ножницы
+2.Бумага\"
+     "
+select = gets.chomp.to_i
+computerC = rand(3).to_i
+puts "Вы выбрали: " + select.to_s
+puts "Компьютер выбрал: " + computerC.to_s
+if select == computerC
+  puts "Ничья !"
+elsif select == 0 && computerC == 1
+  puts "Вы победели"
+elsif select == 0 && computerC == 2
+  puts "Компьютер победил"
+elsif select == 1 && computerC == 0
+  puts "Компьютер победил"
+elsif select == 1 && computerC == 2
+  puts "Вы победили"
+elsif select == 2 && computerC == 0
+  puts "Вы победили"
+elsif select == 2 && computerC == 1
+  puts "Компьютер победил"
+end
